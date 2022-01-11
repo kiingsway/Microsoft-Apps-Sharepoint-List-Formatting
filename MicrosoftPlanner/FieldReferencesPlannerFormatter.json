@@ -1,0 +1,43 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "display": "block",
+        "flex-wrap": "wrap"
+    },
+    "children": [{
+        "forEach": "attachment in @currentField",
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "center",
+            "white-space": "nowrap",
+            "text-overflow": "ellipsis",
+            "overflow": "hidden",
+            "margin-bottom": "5px"
+        },
+        "children": [{
+                "elmType": "div",
+                "style": {
+                    "font-size": "16px",
+                    "margin-left": "1px",
+                    "margin-right": "11px"
+                },
+                "attributes": {
+                    "iconName": "Link"
+                }
+            },
+            {
+                "elmType": "span",
+                "style": {
+                    "font-size": "12px",
+                    "white-space": "nowrap"
+                },
+                "attributes": {
+                    "class": "ms-fontColor-themePrimary"
+                },
+                "txtContent": "[$attachment]"
+            }
+        ]
+    }]
+}

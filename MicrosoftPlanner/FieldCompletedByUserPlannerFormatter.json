@@ -1,0 +1,43 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "display": "=if(@currentField, 'flex', 'none')",
+        "flex-wrap": "nowrap"
+    },
+    "children": [{
+            "defaultHoverField": "@currentField",
+            "elmType": "img",
+            "style": {
+                "margin": "6px 7px",
+                "width": "32px",
+                "height": "32px",
+                "border-radius": "50%"
+            },
+            "attributes": {
+                "src": "=getUserImage(@currentField.email, 'L')"
+            }
+        },
+        {
+            "elmType": "span",
+            "style": {
+                "text-overflow": "ellipsis",
+                "overflow": "hidden",
+                "white-space": "nowrap",
+                "font-size": "14px"
+            },
+            "txtContent": "='Concluída por ' + @currentField.title + ' em ' + toLocaleDateString([$completedDateTime])",
+            "customCardProps": {
+                "openOnEvent": "hover",
+                "directionalHint": "topCenter",
+                "formatter": {
+                    "elmType": "div",
+                    "style": {
+                        "padding": "8px"
+                    },
+                    "txtContent": "='Concluída por ' + @currentField.title + ' em ' + toLocaleDateString([$completedDateTime])"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "span",
+    "style": {
+        "display": "=if(@currentField,'','none')",
+        "color": "inherit",
+        "letter-spacing": ".75px",
+        "padding": "0 2px",
+        "margin": "0 5px"
+    },
+    "attributes": {
+        "title": "=@currentField + if(@currentField == 1, ' anexo', ' anexos')",
+        "class": "ms-fontColor-neutralPrimary"
+    },
+    "children": [{
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "center",
+            "padding": "3px",
+            "border-radius": "4px",
+            "font-size": "11px"
+        },
+        "children": [{
+                "elmType": "span",
+                "style": {
+                    "padding-right": "4px"
+                },
+                "attributes": {
+                    "iconName": "Attach"
+                }
+            },
+            {
+                "elmType": "span",
+                "txtContent": "@currentField"
+            }
+        ]
+    }]
+}

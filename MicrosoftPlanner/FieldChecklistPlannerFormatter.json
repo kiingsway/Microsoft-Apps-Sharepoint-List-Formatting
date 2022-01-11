@@ -1,0 +1,46 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "display": "flex",
+        "flex-wrap": "wrap"
+    },
+    "children": [{
+        "forEach": "subtask in @currentField",
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "center",
+            "white-space": "nowrap",
+            "text-overflow": "ellipsis",
+            "overflow": "hidden",
+            "margin-bottom": "5px",
+            "width": "100%",
+            "text-decoration": "=if(startsWith([$subtask], '⭕'),'none','line-through')"
+        },
+        "attributes": {
+            "class": "ms-fontColor-neutralSecondary ms-fontColor-neutralTertiary--hover",
+            "title": "=substring([$subtask], 2, 99)"
+        },
+        "children": [{
+                "elmType": "div",
+                "style": {
+                    "font-size": "16px",
+                    "margin-left": "1px",
+                    "margin-right": "11px"
+                },
+                "attributes": {
+                    "iconName": "=if(startsWith([$subtask], '⭕'), 'CircleRing', 'SkypeCircleCheck')"
+                }
+            },
+            {
+                "elmType": "span",
+                "style": {
+                    "font-size": "12px",
+                    "white-space": "nowrap"
+                },
+                "txtContent": "=substring([$subtask], 2, 99)"
+            }
+        ]
+    }]
+}

@@ -1,0 +1,45 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "span",
+    "style": {
+        "display": "=if(@currentField,'','none')",
+        "color": "inherit",
+        "padding": "0 2px",
+        "margin": "0 5px",
+        "font-size": "11px"
+    },
+    "attributes": {
+        "title": "=(@currentField - [$activeChecklistItemCount])+' de '+@currentField + if(@currentField == 1, ' item', ' itens')+' da lista de verificação concluídos'",
+        "class": "ms-fontColor-neutralPrimary"
+    },
+    "children": [{
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "center",
+            "padding": "3px",
+            "border-radius": "4px",
+            "letter-spacing": ".75px"
+        },
+        "children": [{
+                "elmType": "span",
+                "style": {
+                    "align-items": "center",
+                    "margin-right": "4px",
+                    "line-height": "1em"
+                },
+                "attributes": {
+                    "iconName": "ReceiptCheck",
+                    "class": "ms-fontSize-18"
+                }
+            },
+            {
+                "elmType": "span",
+                "style": {
+                    "letter-spacing": "inherit"
+                },
+                "txtContent": "= (@currentField - [$activeChecklistItemCount]) + '/' + @currentField"
+            }
+        ]
+    }]
+}

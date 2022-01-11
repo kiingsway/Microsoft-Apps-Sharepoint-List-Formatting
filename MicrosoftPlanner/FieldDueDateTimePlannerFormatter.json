@@ -1,0 +1,49 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "span",
+    "style": {
+        "display": "=if(@currentField,'','none')",
+        "color": "inherit",
+        "letter-spacing": ".75px",
+        "padding": "0 2px",
+        "margin": "0 5px"
+    },
+    "attributes": {
+        "title": "='Vence em ' + @currentField.displayValue",
+        "class": "ms-fontColor-neutralPrimary"
+    },
+    "children": [{
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "center",
+            "padding": "3px",
+            "border-radius": "4px",
+            "font-size": "11px"
+        },
+        "attributes": {
+            "class": "=if(toLocaleDateString(@now) > toLocaleDateString(@currentField) && [$percentComplete] != 1,'ms-bgColor-red ms-fontColor-white ms-bgColor-redDark--hover', '')"
+        },
+        "children": [{
+                "elmType": "span",
+                "style": {
+                    "padding-right": "5px"
+                },
+                "attributes": {
+                    "iconName": "Calendar"
+                }
+            },
+            {
+                "elmType": "span",
+                "txtContent": "=getDate(@currentField)+'/'+(getMonth(@currentField)+1)"
+            },
+            {
+                "elmType": "span",
+                "style": {
+                    "display": "=if(getYear(@now) == getYear(@currentField), 'none', '')"
+                },
+                "txtContent": "='/'+getYear(@currentField)"
+            }
+        ]
+    }]
+}

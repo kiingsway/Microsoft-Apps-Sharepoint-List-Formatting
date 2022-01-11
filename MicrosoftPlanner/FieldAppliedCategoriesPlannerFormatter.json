@@ -1,0 +1,34 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "flex-wrap": "wrap",
+        "display": "flex",
+        "max-height": "210px",
+        "overflow": "auto"
+    },
+    "children": [{
+        "forEach": "label in @currentField",
+        "elmType": "div",
+        "style": {
+            "display": "flex",
+            "align-items": "center",
+            "margin-bottom": "6px",
+            "margin-right": "6px",
+            "padding": "1px 7px",
+            "border-radius": "4px",
+            "font-size": "12px",
+            "border": "1px solid",
+            "background-color": "=if([$label]=='category1', '#fbddf0', if([$label]=='category2', '#e9c7cd', if([$label]=='category3', '#f5edce', if([$label]=='category4', '#dbebc7', if([$label]=='category5', '#d0e7f8', if([$label]=='category6', '#d8cce7', if([$label]=='category7', '#f1d9cc', if([$label]=='category8', '#e5f2d3', if([$label]=='category9', '#c2e7e7', if([$label]=='category10', '#e5e4e3', if([$label]=='category11', '#eaeeef', if([$label]=='category12', '#e2d1cb', if([$label]=='category13', '#c50f1f', if([$label]=='category14', '#da3b01', if([$label]=='category15', '#ff8c00', if([$label]=='category16', '#eaa300', if([$label]=='category17', '#13a10e', if([$label]=='category18', '#0b6a0b', if([$label]=='category19', '#00b7c3', if([$label]=='category20', '#3488c8', if([$label]=='category21', '#003966', if([$label]=='category22', '#7160eb', if([$label]=='category23', '#77004d', if([$label]=='category24', '#7a7574', if([$label]=='category25', '#394146', false)))))))))))))))))))))))))",
+            "border-color": "=if([$label]=='category1', '#ac2d7e', if([$label]=='category2', '#750b1c', if([$label]=='category3', '#6d5700', if([$label]=='category4', '#386304', if([$label]=='category5', '#005ba1', if([$label]=='category6', '#401b6c', if([$label]=='category7', '#a74109', if([$label]=='category8', '#406014', if([$label]=='category9', '#006666', if([$label]=='category10', '#5d5a58', if([$label]=='category11', '#4b5356', if([$label]=='category12', '#4d291c', if([$label]=='category13', '#ffffff', if([$label]=='category14', '#ffffff', if([$label]=='category15', '#000000', if([$label]=='category16', '#000000', if([$label]=='category17', '#000000', if([$label]=='category18', '#ffffff', if([$label]=='category19', '#000000', if([$label]=='category20', '#ffffff', if([$label]=='category21', '#ffffff', if([$label]=='category22', '#ffffff', if([$label]=='category23', '#ffffff', if([$label]=='category24', '#ffffff', if([$label]=='category25', '#ffffff', false)))))))))))))))))))))))))",
+            "color": "=if([$label]=='category1', '#ac2d7e', if([$label]=='category2', '#750b1c', if([$label]=='category3', '#6d5700', if([$label]=='category4', '#386304', if([$label]=='category5', '#005ba1', if([$label]=='category6', '#401b6c', if([$label]=='category7', '#a74109', if([$label]=='category8', '#406014', if([$label]=='category9', '#006666', if([$label]=='category10', '#5d5a58', if([$label]=='category11', '#4b5356', if([$label]=='category12', '#4d291c', if([$label]=='category13', '#ffffff', if([$label]=='category14', '#ffffff', if([$label]=='category15', '#000000', if([$label]=='category16', '#000000', if([$label]=='category17', '#000000', if([$label]=='category18', '#ffffff', if([$label]=='category19', '#000000', if([$label]=='category20', '#ffffff', if([$label]=='category21', '#ffffff', if([$label]=='category22', '#ffffff', if([$label]=='category23', '#ffffff', if([$label]=='category24', '#ffffff', if([$label]=='category25', '#ffffff', false)))))))))))))))))))))))))"
+        },
+        "attributes": {
+            "title": "=if([$label]=='category1', 'Rosa', if([$label]=='category2', 'Vermelho', if([$label]=='category3', 'Amarelo', if([$label]=='category4', 'Verde', if([$label]=='category5', 'Azul', if([$label]=='category6', 'Roxo', if([$label]=='category7', 'Bronze', if([$label]=='category8', 'Verde-lima', if([$label]=='category9', 'Azul piscina', if([$label]=='category10', 'Cinza', if([$label]=='category11', 'Prata', if([$label]=='category12', 'Marrom', if([$label]=='category13', 'Arando-vermelho', if([$label]=='category14', 'Laranja', if([$label]=='category15', 'Pêssego', if([$label]=='category16', 'Margarida', if([$label]=='category17', 'Verde-claro', if([$label]=='category18', 'Verde escuro', if([$label]=='category19', 'Verde azulado', if([$label]=='category20', 'Azul claro', if([$label]=='category21', 'Azul escuro', if([$label]=='category22', 'Lavanda', if([$label]=='category23', 'Ameixa', if([$label]=='category24', 'Cinza claro', if([$label]=='category25', 'Cinza escuro', false)))))))))))))))))))))))))"
+        },
+        "children": [{
+            "elmType": "span",
+            "txtContent": "=if([$label]=='category1', 'Rosa', if([$label]=='category2', 'Vermelho', if([$label]=='category3', 'Amarelo', if([$label]=='category4', 'Verde', if([$label]=='category5', 'Azul', if([$label]=='category6', 'Roxo', if([$label]=='category7', 'Bronze', if([$label]=='category8', 'Verde-lima', if([$label]=='category9', 'Azul piscina', if([$label]=='category10', 'Cinza', if([$label]=='category11', 'Prata', if([$label]=='category12', 'Marrom', if([$label]=='category13', 'Arando-vermelho', if([$label]=='category14', 'Laranja', if([$label]=='category15', 'Pêssego', if([$label]=='category16', 'Margarida', if([$label]=='category17', 'Verde-claro', if([$label]=='category18', 'Verde escuro', if([$label]=='category19', 'Verde azulado', if([$label]=='category20', 'Azul claro', if([$label]=='category21', 'Azul escuro', if([$label]=='category22', 'Lavanda', if([$label]=='category23', 'Ameixa', if([$label]=='category24', 'Cinza claro', if([$label]=='category25', 'Cinza escuro', false)))))))))))))))))))))))))"
+        }]
+    }]
+}
